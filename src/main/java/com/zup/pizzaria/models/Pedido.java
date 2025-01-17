@@ -12,10 +12,12 @@ public class Pedido {
     private Long id;
     private String descricao;
     private Long clienteId;
+    private Double valorTotal;
 
     public Pedido(Long clienteId, String descricao) {
         this.clienteId = clienteId;
         this.descricao = descricao;
+        this.valorTotal = valorTotal;
     }
 
     public Long getId() {
@@ -40,5 +42,13 @@ public class Pedido {
 
     public void setClienteId(Long clienteId) {
         this.clienteId = clienteId;
+    }
+
+    public Double getValorTotal() {
+        return valorTotal;
+    }
+
+    public void setValorTotal(Double valorTotal) {
+        this.valorTotal = valorTotal;
     }
 }
