@@ -3,7 +3,7 @@ package com.zup.pizzaria.models;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Pedido {
@@ -14,10 +14,17 @@ public class Pedido {
     private Long clienteId;
     private Double valorTotal;
 
-    public Pedido(Long clienteId, String descricao) {
+//    @ManyToOne
+//    @JoinColumn(name = "cliente_id", nullable = false)
+//    private Cliente cliente; // futuro relac c Cliente
+
+
+    public Pedido(Long clienteId, String descricao, Double valorTotal) {
         this.clienteId = clienteId;
         this.descricao = descricao;
         this.valorTotal = valorTotal;
+    }
+    public Pedido() {
     }
 
     public Long getId() {
@@ -51,4 +58,5 @@ public class Pedido {
     public void setValorTotal(Double valorTotal) {
         this.valorTotal = valorTotal;
     }
+
 }

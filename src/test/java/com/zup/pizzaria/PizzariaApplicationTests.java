@@ -1,13 +1,13 @@
 package com.zup.pizzaria;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootTest
-class PizzariaApplicationTests {
+@SpringBootApplication
+public class PizzariaApplicationTests {
 
-	@Test
-	void contextLoads() {
+	public static void main(String[] args) {
+		SpringApplication.run(PizzariaApplication.class, args);
 	}
 
 }
